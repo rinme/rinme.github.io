@@ -1,22 +1,34 @@
-<!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" href="/yes/favicon.ico">
-    <title>Why not</title>
-    <link href="../css/app.fb0c6e1c.css" rel="preload" as="style">
-    <link href="../js/app.f7cac7f7.js" rel="preload" as="script">
-    <link href="../js/chunk-vendors.3b541818.js" rel="preload" as="script">
-    <link href="../css/app.fb0c6e1c.css" rel="stylesheet">
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but yes doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <script src="../js/chunk-vendors.3b541818.js"></script>
-    <script src="../js/app.f7cac7f7.js"></script>
-  </body>
-</html>
+<!DOCTYPE html><html lang=""><head><title>Rinme</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"><title>yesv2</title><link href="/css/app.4d73c22b.css" rel="preload" as="style"><link href="/css/chunk-vendors.86197969.css" rel="preload" as="style"><link href="/js/app.5e4bd584.js" rel="preload" as="script"><link href="/js/chunk-vendors.585e9890.js" rel="preload" as="script"><link href="/css/chunk-vendors.86197969.css" rel="stylesheet"><link href="/css/app.4d73c22b.css" rel="stylesheet"></head><body><script>var Flip = true;
+
+var CurStr = "";
+var Pos = 0;
+var Invert = false;
+
+var TextL = "Rinme";
+var TextR = "⌨⌛⌚";
+
+function loop() {
+    var Target = Flip ? TextR : TextL;
+
+    if (Pos > Target.length) {
+        Invert = true;
+    } else if (Pos < 0) {
+        if (Invert) {
+            Flip = !Flip;
+            Target = Flip ? TextR : TextL;
+            Pos = 0;
+        }
+
+        Invert = false;
+    }
+
+    CurStr = Target.substring(0, Pos);
+    Pos += (Invert ? -1 : 1);
+
+    if (CurStr.length == 0)
+        CurStr = "▪";
+
+    document.getElementsByTagName("title")[0].innerHTML = CurStr;
+}
+
+setInterval(loop, 300);</script><noscript><strong>We're sorry but yesv2 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/js/chunk-vendors.585e9890.js"></script><script src="/js/app.5e4bd584.js"></script></body></html>
