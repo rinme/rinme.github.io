@@ -1,4 +1,4 @@
-# rinpage
+# RinPage
 
 ## Build Setup
 
