@@ -1,58 +1,24 @@
-# Rinme's GitPage Source
+# rinpage
 
-### Made with [Vue.js](https://vuejs.org/) and [Vuetify.js](https://vuetifyjs.com/)
-
----
-
-# Pre-require
-
-- **Node.js** =< 11
-
-- **npm**
-
-- **yarn**
-
----
-
-# Get started!
-
-- **Install packages**
-
-```zsh
+## Project setup
+```
 yarn install
 ```
 
-or
-
-```zsh
-npm install
+### Compiles and hot-reloads for development
 ```
-
-
-
-- **Get it working**
-
-```zsh
 yarn serve
 ```
 
-or
-
-```zsh
-yarn start
+### Compiles and minifies for production
 ```
-
-
-
-- Building
-
-```zsh
 yarn build
 ```
 
----
+### Lints and fixes files
+```
+yarn lint
+```
 
-# License
-
-### [MIT](https://github.com/rinme/rinme.github.io/blob/main/LICENSE)
-
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
